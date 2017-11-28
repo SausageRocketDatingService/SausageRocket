@@ -12,6 +12,8 @@ git config --global user.name "Travis"
 #using token clone gh-pages branch
 git clone --quiet --branch=master https://${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git > /dev/null
 
+echo 'Start deployment'
+
 #go into directory and copy data we're interested in to that directory
 cd ${GH_REPO}
 cp -Rf $HOME/dist/* .
