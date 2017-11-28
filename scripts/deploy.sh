@@ -4,6 +4,9 @@ set -e # exit with nonzero exit code if anything fails
 
 if [[ $TRAVIS_BRANCH == "dev" && $TRAVIS_PULL_REQUEST == "false" ]]; then
 
+#copy data we're interested in to other place
+cp -R dist $HOME/dist
+
 #go to home and setup git
 cd $HOME
 git config --global user.email "travis@travis-ci.org"
@@ -11,8 +14,6 @@ git config --global user.name "Travis"
 
 #using token clone gh-pages branch
 git clone --quiet --branch=master https://${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git > /dev/null
-
-echo 'Start deployment'
 
 #go into directory and copy data we're interested in to that directory
 cd ${GH_REPO}
