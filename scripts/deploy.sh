@@ -4,7 +4,7 @@ set -e # exit with nonzero exit code if anything fails
 
 if [[ $TRAVIS_BRANCH == "dev" && $TRAVIS_PULL_REQUEST == "false" ]]; then
 
-mkdir dist
+mkdir $HOME/dist
 #copy data we're interested in to other place
 cp -R dist $HOME/dist
 
