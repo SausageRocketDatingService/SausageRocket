@@ -4,9 +4,6 @@ set -e # exit with nonzero exit code if anything fails
 
 if [[ $TRAVIS_BRANCH == "dev" && $TRAVIS_PULL_REQUEST == "false" ]]; then
 
-#copy data we're interested in to other place
-cp -R dist $HOME/dist
-
 #go to home and setup git
 cd $HOME
 git config --global user.email "travis@travis-ci.org"
