@@ -1,0 +1,16 @@
+sudo: enabled
+language: node_js
+node_js:
+- '9'
+cache: yarn
+install:
+- yarn
+script:
+- yarn lint
+after_success:
+- yarn build
+- bash ./scripts/deploy.sh
+env:
+  global:
+  - GH_USER: SausageRocketDatingService
+  - GH_REPO: SausageRocketDatingService.github.io
