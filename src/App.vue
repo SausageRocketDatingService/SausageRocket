@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="http://vuejs.org/images/logo.png">
+    <img src="http://vuejs.org/images/logo.png" />
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -22,12 +22,12 @@
 <script>
 export default {
   name: 'app',
-  data () {
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
+      msg: 'Welcome to Your Vue.js App',
+    };
+  },
+};
 </script>
 
 <style scoped>
@@ -45,7 +45,8 @@ img {
   height: 200px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 
